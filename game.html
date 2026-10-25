@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budapest Metrói</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id ="game-screen" class="screen active">
+
+        <div class="game-header">
+
+            <div class="player-info">
+                <span id="current-player">Játékos: </span>
+                <span id="timer">Idő: 00:00</span>
+            </div>
+
+            <div class="round-info">
+                <span id="current-round">Kör 1/4</span>
+                <span id="current-line">Aktuális vonal: <b id="colored-line-name"> M1</b></span>
+            </div>
+
+        </div>
+
+        <div class="game-main">
+        <!-- Canvas for the game map -->
+            <div class="map-container">
+                <canvas id="game-canvas"></canvas>
+            </div>
+        
+            <!-- Game controls sidebar -->
+            <div class="game-controls">
+
+                <div class="current-card">
+                    <h3>Aktuális kártya</h3>
+                    <div id="card-display" class="card-placeholder">
+                        <!-- Card will be displayed here -->
+                    </div>
+                </div>
+
+                <div class="card-counters">
+                    <div class="counter">
+                        <span>Középső peronos: </span>
+                        <span id="middle-count">0/5</span>
+                    </div>
+                    <div class="counter">
+                        <span>Szélső peronos: </span>
+                        <span id="side-count">0/5</span>
+                    </div>
+                </div>  
+                
+                <div class="action-buttons">
+                    <button id="build-route" class="btn btn-primary" disabled>Útvonal építése</button>
+                    <button id="skip-turn" class="btn btn-primary">Új kártya húzása</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="canvas.js"></script>
+</body>
+</html>

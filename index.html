@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hun">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budapest Metrói</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu-screen" class="screen active">
+        <div class="menu-container"> <!--kozepre igazit-->
+        <h1>Budapest Metrói</h1>
+        
+        <div class="input-group">
+            <label for="player-name">Játékos neve:</label>
+            <input type="text" id="player-name" placeholder="Gipsz Jakab" required>
+        </div>
+        
+        <button id="start-game" class="btn btn-primary">Játék indítása</button>
+
+        <div class="menu-actions">
+            <button id="view-instructions" class="btn btn-primary">Játékszabályzat</button>
+        </div>
+
+        <!-- Szabályzat -->
+        <div id="instructions" class="menu-section hidden">
+            <h2>Játékszabályzat</h2>
+            <div class="instructions-content">
+                <p ><b>Építsd meg Budapest metróvonalait!</b></p>
+                <ul>
+                    <li>4 forduló - egy-egy minden metróvonalhoz.</li>
+                    <li>Húzz kártyákat és építs nekik megfelelő vonalakat!</li>
+                    <li>Addig kell húznod, amíg nem gyűlik össze 5 szélső és 5 középső peronos kártya!</li>
+                    <li>Ezt követően új forduló indul.</li>
+                    <li>Csak a meglévő vonal végpontjaiból építhetsz merőlegesen vagy átlósan.</li>
+                    <li>2 megállót csak egy szakasz köthet össze, de egy megállón több vonal is átmehet.</li>
+                    <li>A végpontok nem érhetnek össze körben.</li>
+                    <li>A szakaszokat a kezdő-, majd végpontra kattintva helyezhetjük el a kártyahúzást és a szakasz építésére kattintást követően.</li>
+                    <li>A szakaszok csak állomáson kereszteződhetnek.</li>
+                </ul>
+            </div>
+            <button class="btn btn-primary back-btn">Visszacsukás</button>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
